@@ -743,3 +743,124 @@ body {
   background: var(--light-blue);
   transform: translateX(5px);
 }
+/* Tab Navigation */
+.tabs-navigation {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.tabs-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 0;
+}
+
+.tab-btn {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: var(--primary-blue);
+  background: var(--light-blue);
+}
+
+.tab-btn.active {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+  background: var(--light-blue);
+}
+
+/* Small User Avatar */
+.user-avatar-small {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Info Cards */
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--light-blue);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.info-card i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+.info-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--text-dark);
+}
+
+.info-card p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Form Select Small */
+.form-select-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+/* Status Badges for Select */
+select.badge-success {
+  color: #065f46;
+}
+
+select.badge-warning {
+  color: #92400e;
+}
+
+select.badge-danger {
+  color: #991b1b;
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+  .tabs-list {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .tab-btn span {
+    display: none;
+  }
+  
+  .tab-btn i {
+    font-size: 1.1rem;
+  }
+}
